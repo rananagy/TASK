@@ -1,0 +1,12 @@
+---
+- name: Services are restarted
+  hosts: group1
+  tasks:
+   - name: ssh,nginx,ntp are restarted
+     service:
+      name: "{{item}}"
+      state: restarted
+     with_items: 
+      - nginx
+      - ssh
+      - ntp

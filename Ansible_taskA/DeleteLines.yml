@@ -1,0 +1,9 @@
+---
+ - name: Delete All lines start with Apple 
+   hosts: group1
+   tasks:
+   - name: Delete All lines start with Apple 
+     lineinfile:
+       path: /root/task/Targetfile.txt
+       regexp: "^Apple"
+       state: absent
